@@ -11,15 +11,21 @@ const Navbar = () => {
   return (
     <header className=" flex items-center h-24 px-5 justify-between max-w-[1240px] mx-auto text-white">
       <h1 className=" font-bold text-4xl text-[#148412]">Finance.</h1>
-     
-      <div className="hidden sm:flex sm:gap-2 md:gap-6">
+
+      <div className="hidden md:flex  md:gap-6">
         <nav className="text-white ">
           <ul className="flex space-x-8">
-            <li className="p-4">Home</li>
-            <li className="p-4">Company</li>
-            <li className="p-4">Resources</li>
-            <li className="p-4">About</li>
-            <li className="p-4">Contact</li>
+            <li className="p-4 hover:text-[#148412] cursor-pointer ">Home</li>
+            <li className="p-4 hover:text-[#148412] cursor-pointer ">
+              Company
+            </li>
+            <li className="p-4 hover:text-[#148412] cursor-pointer ">
+              Resources
+            </li>
+            <li className="p-4 hover:text-[#148412] cursor-pointer ">About</li>
+            <li className="p-4 hover:text-[#148412] cursor-pointer ">
+              Contact
+            </li>
           </ul>
         </nav>
         <div className="bg-[#148412] text-white px-6 py-1 rounded-md flex justify-center items-center">
@@ -30,8 +36,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="block sm:hidden">
-        {!openMenu ? (
+      <div className="block md:hidden">
+        {openMenu === false ? (
           <AiOutlineMenu
             onClick={handleOpenMenuChange}
             color="white"
@@ -57,11 +63,21 @@ const Navbar = () => {
           Finance.
         </h1>
         <ul className="uppercase mr-">
-          <li className="px-4 py-2 border-b border-gray-600">Home</li>
-          <li className="px-4 py-2 border-b border-gray-600">Company</li>
-          <li className="px-4 py-2 border-b border-gray-600">Resources</li>
-          <li className="px-4 py-2 border-b border-gray-600">About</li>
-          <li className="px-4 py-2 border-b border-gray-600">Contact</li>
+          <li className="px-4 py-2 border-b border-gray-600 hover:text-[#148412] cursor-pointer ">
+            Home
+          </li>
+          <li className="px-4 py-2 border-b border-gray-600 hover:text-[#148412] cursor-pointer ">
+            Company
+          </li>
+          <li className="px-4 py-2 border-b border-gray-600 hover:text-[#148412] cursor-pointer ">
+            Resources
+          </li>
+          <li className="px-4 py-2 border-b border-gray-600 hover:text-[#148412] cursor-pointer ">
+            About
+          </li>
+          <li className="px-4 py-2 border-b border-gray-600 hover:text-[#148412] cursor-pointer ">
+            Contact
+          </li>
         </ul>
       </nav>
     </header>
